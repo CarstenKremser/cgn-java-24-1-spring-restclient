@@ -9,7 +9,7 @@ import java.util.List;
 @NoArgsConstructor
 public class RAndMResponse {
 
-
+    private RandMInfo info;
     private List<RAndMChar> results;
 
 }

@@ -24,9 +24,14 @@ public class RAndMController {
         return service.getRickAndMortyCharsByStatus(status);
     }
 
-    @GetMapping("/charactercount")
-    public Integer getRickAndMortyCharCountByStatus(@RequestParam("status") String status){
-        return service.getRickAndMortyCharCountByStatus(status);
+    @GetMapping("/character/{id}")
+    public RAndMChar getRickAndMortyCharsById(@PathVariable("id") String id){
+        return service.getRickAndMortyCharById(id);
+    }
+
+    @GetMapping("/species-statistic")
+    public Integer getRickAndMortyAliveCharacterCountByStatus(@RequestParam("species") String species){
+        return service.getRickAndMortyAliveCharacterCountBySpecies(species);
     }
 
 }
